@@ -1,0 +1,147 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "sky",
+  "password" : "naufalsky",
+  "name" : "Mochamad Naufal Rizky"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "sky",
+  "password" : "naufalsky"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "name" : "Mochamad Naufal Rizky"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "first_name" : "Yenzi",
+  "last_name" : "Friska",
+  "email" : "frsk@cinut.com",
+  "phone" : "0987654321"
+}
+
+###
+
+GET http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+###
+
+GET http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Update
+
+PUT http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "first_name": "Annisa",
+  "last_name": "Desnia",
+  "email": "andez@ans.com",
+  "phone": "0321456789"
+}
+
+### Delete Contact
+
+DELETE http://localhost:3000/api/contacts/317
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Create Address
+
+POST http://localhost:3000/api/contacts/316/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "street" : "Kantor",
+  "city" : "Bogor",
+  "province" : "Jawa Barat",
+  "country" : "Indonesia",
+  "postal_code" : "090704"
+}
+
+
+### List Addresses
+
+GET http://localhost:3000/api/contacts/316/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+
+### Get Address
+
+GET http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+### Update Address
+
+PUT http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
+
+{
+  "street" : "Kantor Bekerja",
+  "city" : "Bekasi",
+  "province" : "Jawa Barat",
+  "country" : "Indonesia",
+  "postal_code" : "324234"
+}
+
+### Remove Address
+
+DELETE http://localhost:3000/api/contacts/316/addresses/46
+Content-Type: application/json
+Accept: application/json
+Authorization: 19dfc22d-4545-45a9-9b36-ec0fc3fee291
